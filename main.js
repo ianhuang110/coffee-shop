@@ -41,46 +41,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
-
-    // Audio Controller
-    const soundBtn = document.getElementById('sound-toggle');
-    const bgMusic = document.getElementById('bg-music');
-    const sfxHover = document.getElementById('sfx-hover');
-    let isPlaying = false;
-
-    // Set lower volumes for background sounds
-    if (bgMusic) bgMusic.volume = 0.3;
-    if (sfxHover) sfxHover.volume = 0.2;
-
-    const toggleSound = () => {
-        if (!isPlaying) {
-            if (bgMusic) {
-                bgMusic.play().catch(e => console.log("Audio play failed:", e));
-            }
-            soundBtn.querySelector('.icon').textContent = '🔊';
-            soundBtn.querySelector('.text').textContent = '靜音控制';
-            soundBtn.classList.add('playing');
-        } else {
-            if (bgMusic) {
-                bgMusic.pause();
-            }
-            soundBtn.querySelector('.icon').textContent = '🔇';
-            soundBtn.querySelector('.text').textContent = '開啟音效';
-            soundBtn.classList.remove('playing');
-        }
-        isPlaying = !isPlaying;
-    };
-
-    soundBtn.addEventListener('click', toggleSound);
-
-    // Hover sounds for cards and nav links
-    const interactiveElements = document.querySelectorAll('.card, nav a');
-    interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            if (isPlaying) {
-                sfxHover.currentTime = 0;
-                sfxHover.play().catch(e => { });
-            }
-        });
-    });
 });

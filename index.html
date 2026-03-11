@@ -17,14 +17,12 @@
         <h1>CAFE MASTER</h1>
         <nav>
             <ul>
+                <li><a href="#story">品牌理念</a></li>
                 <li><a href="#beans">咖啡豆</a></li>
                 <li><a href="#equipment">器材</a></li>
                 <li><a href="#brewing">沖泡手法</a></li>
+                <li><a href="#menu">精選菜單</a></li>
             </ul>
-            <button id="sound-toggle" class="sound-btn" aria-label="Toggle Sound">
-                <span class="icon">🔇</span>
-                <span class="text">開啟音效</span>
-            </button>
         </nav>
     </header>
 
@@ -36,6 +34,42 @@
     </section>
 
     <main>
+        <!-- Brand Story Section -->
+        <section id="story">
+            <div class="section-title reveal">
+                <h2>生於工業，淬鍊於心</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="story-container">
+                <div class="story-text reveal">
+                    <h3>不妥協的職人精神</h3>
+                    <p>CAFE MASTER 誕生於舊工廠的靈魂中。我們保留了粗獷的鐵件、斑駁的紅磚與沉穩的深木色，就如同我們對待每一顆咖啡豆的態度——剝去華而不實的包裝，專注於呈現最本質、最純粹的風味。</p>
+                    <p>在這裡，機器的轟鳴聲被義式咖啡機的萃取聲取代；冰冷的金屬被咖啡的溫度所融化。我們相信，真正的質感來自於細節的打磨，每一杯咖啡都是我們獻給這座城市的生活藝術品。</p>
+                    
+                    <div class="story-features">
+                        <div class="feature">
+                            <span class="icon">🏭</span>
+                            <span>自家直火烘焙</span>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">⚖️</span>
+                            <span>科學精準萃取</span>
+                        </div>
+                        <div class="feature">
+                            <span class="icon">🖤</span>
+                            <span>沉浸式靜謐空間</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-images reveal">
+                    <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&fit=crop" alt="Cafe Interior" class="img-main">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?w=800&fit=crop" alt="Coffee Roasting" class="img-sub">
+                </div>
+            </div>
+        </section>
+
         <!-- Bean Varieties -->
         <section id="beans">
             <div class="section-title reveal">
@@ -137,6 +171,102 @@
                 </div>
             </div>
         </section>
+
+        <!-- Menu Section -->
+        <section id="menu">
+            <div class="section-title reveal">
+                <h2>精選菜單</h2>
+                <div class="divider"></div>
+                <p style="margin-top: 20px;">使用頂級原料，為您呈現極致的味蕾體驗與工業風美學。</p>
+            </div>
+
+            <!-- Coffee Sub-section -->
+            <h3 class="menu-category reveal">職人咖啡 <span>Coffee</span></h3>
+            <div class="grid menu-grid">
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?q=80&w=600&auto=format&fit=crop" alt="Espresso" class="menu-img">
+                    <div class="menu-info">
+                        <h4>濃縮咖啡 Espresso</h4>
+                        <p>精選深焙配方，濃厚油脂與強烈核果香氣，體驗極致醇厚。</p>
+                        <span class="price">NT$ 120</span>
+                    </div>
+                </div>
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1518057111178-44a106bad636?q=80&w=600&auto=format&fit=crop" alt="Latte Art" class="menu-img">
+                    <div class="menu-info">
+                        <h4>經典拿鐵 Classic Latte</h4>
+                        <p>完美融合絲滑奶泡與厚實濃縮，呈現細膩拿鐵藝術。</p>
+                        <span class="price">NT$ 150</span>
+                    </div>
+                </div>
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=600&auto=format&fit=crop" alt="Pour Over Coffee" class="menu-img">
+                    <div class="menu-info">
+                        <h4>單品手沖 Pour Over</h4>
+                        <p>嚴選當季莊園豆，細膩展現咖啡獨特的花果香與層次。</p>
+                        <span class="price">NT$ 200</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desserts Sub-section -->
+            <h3 class="menu-category reveal" style="margin-top: 80px;">手工甜點 <span>Desserts</span></h3>
+            <div class="grid menu-grid">
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?q=80&w=600&auto=format&fit=crop" alt="Chocolate Cake" class="menu-img">
+                    <div class="menu-info">
+                        <h4>重黑巧克力蛋糕</h4>
+                        <p>採用 72% 比利時黑巧克力，苦甜平衡，口感綿密扎實。</p>
+                        <span class="price">NT$ 180</span>
+                    </div>
+                </div>
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?q=80&w=600&auto=format&fit=crop" alt="Cheesecake" class="menu-img">
+                    <div class="menu-info">
+                        <h4>焦糖巴斯克乳酪</h4>
+                        <p>外層微焦香氣搭配內部半熟滑順口感，濃郁奶香回味無窮。</p>
+                        <span class="price">NT$ 160</span>
+                    </div>
+                </div>
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1547595628-c61a29f496f0?w=600&fit=crop" alt="Tiramisu" class="menu-img">
+                    <div class="menu-info">
+                        <h4>經典大人味提拉米蘇</h4>
+                        <p>吸滿濃縮咖啡與咖啡酒的手指餅乾，搭配馬斯卡彭起司。</p>
+                        <span class="price">NT$ 190</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Light Meals Sub-section -->
+            <h3 class="menu-category reveal" style="margin-top: 80px;">精緻輕食 <span>Light Meals</span></h3>
+            <div class="grid menu-grid">
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1528736235302-52922df5c122?q=80&w=600&auto=format&fit=crop" alt="Croissant Sandwich" class="menu-img">
+                    <div class="menu-info">
+                        <h4>燻鮭魚起司可頌</h4>
+                        <p>外層酥脆可頌，夾入挪威冷燻鮭魚與特調奶油乳酪。</p>
+                        <span class="price">NT$ 220</span>
+                    </div>
+                </div>
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?q=80&w=600&auto=format&fit=crop" alt="Avocado Toast" class="menu-img">
+                    <div class="menu-info">
+                        <h4>水波蛋酪梨烤麵包</h4>
+                        <p>天然酸種麵包搭配新鮮酪梨醬泥，佐上完美的半熟水波蛋。</p>
+                        <span class="price">NT$ 240</span>
+                    </div>
+                </div>
+                <div class="card menu-card reveal">
+                    <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=600&auto=format&fit=crop" alt="Bagel" class="menu-img">
+                    <div class="menu-info">
+                        <h4>經典黑麥貝果</h4>
+                        <p>手作窯烤貝果，帶有些微麥香迷人嚼勁，附核桃乳酪抹醬。</p>
+                        <span class="price">NT$ 150</span>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -145,12 +275,6 @@
             <a href="#" style="color: white; margin: 10px;">Facebook</a>
             <a href="#" style="color: white; margin: 10px;">Instagram</a>
         </div>
-    </footer>
-
-    <footer id="audio-container">
-        <!-- Local Background Music -->
-        <audio id="bg-music" loop src="assets/bg-music.mp4"></audio>
-
     </footer>
 
     <script src="main.js"></script>
