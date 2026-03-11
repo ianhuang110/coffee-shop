@@ -1,27 +1,3 @@
-// YouTube IFrame API Setup
-let ytPlayer;
-let isPlayerReady = false;
-
-window.onYouTubeIframeAPIReady = function() {
-    ytPlayer = new YT.Player('youtube-player', {
-        height: '0',
-        width: '0',
-        videoId: 'HMZjbC-c6hM', // Starbucks style chill music
-        playerVars: {
-            'autoplay': 0,
-            'controls': 0,
-            'loop': 1,
-            'playlist': 'HMZjbC-c6hM' // Required for loop
-        },
-        events: {
-            'onReady': (event) => {
-                isPlayerReady = true;
-                event.target.setVolume(40);
-            }
-        }
-    });
-};
-
 document.addEventListener('DOMContentLoaded', () => {
     // Reveal animations on scroll
     const reveals = document.querySelectorAll('.reveal');
@@ -68,23 +44,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Audio Controller
     const soundBtn = document.getElementById('sound-toggle');
+    const bgMusic = document.getElementById('bg-music');
     const sfxHover = document.getElementById('sfx-hover');
     let isPlaying = false;
 
     // Set lower volumes for background sounds
-    sfxHover.volume = 0.2;
+    if (bgMusic) bgMusic.volume = 0.3;
+    if (sfxHover) sfxHover.volume = 0.2;
 
     const toggleSound = () => {
         if (!isPlaying) {
-            if (isPlayerReady && ytPlayer) {
-                ytPlayer.playVideo();
+            if (bgMusic) {
+                bgMusic.play().catch(e => console.log("Audio play failed:", e));
             }
             soundBtn.querySelector('.icon').textContent = '🔊';
             soundBtn.querySelector('.text').textContent = '靜音控制';
             soundBtn.classList.add('playing');
         } else {
-            if (isPlayerReady && ytPlayer) {
-                ytPlayer.pauseVideo();
+            if (bgMusic) {
+                bgMusic.pause();
             }
             soundBtn.querySelector('.icon').textContent = '🔇';
             soundBtn.querySelector('.text').textContent = '開啟音效';
