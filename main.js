@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
             header.style.padding = '1rem 5%';
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
+            header.style.background = 'rgba(18, 18, 18, 0.95)';
         } else {
             header.style.padding = '1.5rem 5%';
-            header.style.background = 'rgba(255, 255, 255, 0.1)';
+            header.style.background = 'rgba(18, 18, 18, 0.85)';
         }
     });
 
