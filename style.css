@@ -97,20 +97,69 @@ header h1 {
     letter-spacing: -1px;
 }
 
-nav ul {
+.main-nav {
     display: flex;
     list-style: none;
     gap: 2rem;
 }
 
-nav a {
+.nav-item {
+    position: relative;
+    padding: 10px 0;
+}
+
+.nav-item > a {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 500;
+    font-size: 1.05rem;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-item > a:hover {
+    color: var(--primary-color);
+}
+
+.sub-nav {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    background-color: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid var(--glass-border);
+    padding: 10px 0;
+    min-width: 160px;
+    box-shadow: var(--shadow);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    z-index: 1001;
+}
+
+.nav-item:hover .sub-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, 0);
+}
+
+.sub-nav a {
+    color: var(--text-main);
+    text-decoration: none;
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    font-weight: 400;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    white-space: nowrap;
+}
+
+.sub-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--primary-color);
 }
 
